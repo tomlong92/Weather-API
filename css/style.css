@@ -1,0 +1,142 @@
+/* ALL ELEMENTS */
+
+* {	
+	box-sizing: border-box;
+	font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+}
+
+
+/* FULL SCREEN BACKGROUND */
+
+body, html {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+}
+
+#background  {
+	width: 100%;
+	height: 100%;	
+	background-color: #eaedf1;
+	background: 
+		url('http://jasonlefkowitz.net/wp-content/uploads/2013/07/Cute-Cats-cats-33440930-1280-800.jpg')
+		no-repeat
+		center
+		center
+		fixed;
+	background-size: cover;
+	overflow: auto; /* Fix to prevent margin collapsing */
+}
+
+
+/* WRAPPER FOR WEATHER REPORT */
+
+#wrap {
+	width: 960px;
+	margin: 0 auto;	
+	opacity: 0.95;
+}
+
+
+/* INPUT FORM */
+
+#city-search-form {
+	margin: 20px 0.5%;
+	width: 99%;
+}
+input, input:hover {
+	outline: 0;
+	vertical-align: middle;
+	border: 0;
+}
+#city-search-form input {
+	display: inline-block;	
+	text-align: center;
+	padding: 15px;
+	margin: 0;
+	background-color: white;
+	color: #323a45;
+	font-size: 40px;
+	letter-spacing: 2px;
+	font-weight: 100;
+}
+#city-search-form input[type="text"] {
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+	width: 75%;
+}
+#city-search-form input[type="submit"] {
+	background-color: #5CD0ED;
+	color: white;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+	width: 25%;
+	height: 100%;
+}
+#city-search-form input[type="submit"]:hover {
+	background-color: #1AB9E1;
+}
+#city-search-form input[type="submit"]:active {
+	background-color: #1388A6;
+}
+
+/* 
+	WEATHER CARDS 
+
+	5x cards must fit on each line, so: 
+		5 x (left margin + width + right margin) = 100%
+
+*/
+.weather-card {
+	border-radius: 10px;
+	width: 19%;
+	margin: 0.5%; 
+	background-color: white;
+	padding: 10px;
+	color: #323a45;
+	display: inline-block;
+	text-align: center;
+}
+.weather-icons {
+	margin: 5px 0;
+	color: rgb(84, 206, 236);
+}
+.weather-icons i {
+	padding: 5px;	
+}
+.weather-card i.weather {
+	display: block;
+	font-size: 80px;
+}
+.weather-card i.wind-speed,
+.weather-card i.wind-dir {
+	font-size: 40px;
+	padding: 5px;
+}
+.weather-card span {
+	display: block;
+	text-align: left;
+}
+.weather-card .day, 
+.weather-card .date {
+	text-align: center;
+	font-size: 30px;
+}
+.weather-card .min-temp, 
+.weather-card .max-temp {
+	display: inline-block;
+	font-size: 30px;
+	margin-left: 5px;
+}
+.weather-card .min-temp:after, 
+.weather-card .max-temp:after {
+	content: "\00b0";
+	display: inline-block;
+	font-size: 30px;
+}
+.weather-card .min-temp {
+	text-align: center;
+	font-size: 30px;
+	color: #A3A3A3;
+}
